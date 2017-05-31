@@ -1,0 +1,20 @@
+{
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "modules": true
+        }
+    },
+    "extends": "eslint",
+    "rules": {
+        "lines-around-comment": "off",
+        "semi": 2,
+            "newline-after-var": "off",
+        "valid-jsdoc": [2, {
+            "prefer": {
+                "return": "return"
+            }
+        }]
+    }
+}
