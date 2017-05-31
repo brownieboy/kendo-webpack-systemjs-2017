@@ -3,6 +3,7 @@
 const path = require("path");
 const webpack = require("webpack");
 const merge = require("webpack-merge");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 const TARGET = process.env.npm_lifecycle_event;
 const ROOT_PATH = path.resolve(__dirname);
@@ -68,6 +69,13 @@ if (TARGET === "buildwp") {
                 compress: {
                     warnings: false
                 }
+            }),
+            new CompressionPlugin({
+                asset: "[path].gz[query]",
+                algorithm: "gzip",
+                test: /\.js$|\.css$|\.html$/,
+                threshold: 10240,
+                minRatio: 0.8
             }),
             new webpack.LoaderOptionsPlugin({
                 minimize: true,
