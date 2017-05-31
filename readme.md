@@ -1,4 +1,4 @@
-# kendo-webpack-systemjs
+# kendo-webpack-systemjs-2017
 Basic boilerplate for using KendoUI Pro NPM packages with ES6 modules, using Webpack 2 as the module loader and Babel to transpile to ES5.
 
 In this way, only the parts of Kendo that you're actually using will be included in your final code, which may result in a huge file size reduction in your final code.  Yes, you can always create a custom version of Kendo by hand, but do you really want to keep having to so that every time you add a new Kendo feature?  That's assuming that you even remember to do it, of course!
